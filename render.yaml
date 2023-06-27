@@ -11,3 +11,5 @@ services:
       sync: false
     - key: LOKI_HOST
       sync: false
+    - key: PORT
+      value: 1514

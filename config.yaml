@@ -1,6 +1,5 @@
 server:
-  http_listen_port: 9080
-  grpc_listen_port: 0
+  disable: true
 
 positions:
   filename: /tmp/positions.yaml
@@ -11,7 +10,7 @@ clients:
 scrape_configs:
   - job_name: ${JOB_NAME:-render}
     syslog:
-      listen_address: 0.0.0.0:1514
+      listen_address: 0.0.0.0:${PORT}
       labels:
         job: syslog
     relabel_configs:
