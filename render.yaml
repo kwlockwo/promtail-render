@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: promtail
+    env: docker
+    plan: standard
+    autoDeploy: true
+    envVars:
+    - key: LOKI_TENANT_ID
+      sync: false
+    - key: LOKI_TOKEN
+      sync: false
+    - key: LOKI_HOST
+      sync: false
