@@ -21,7 +21,7 @@ scrape_configs:
       target_label: 'host'
     - source_labels: ['__syslog_message_severity']
       target_label: 'severity'
-    - source_labels: ['__syslog_message_appname']
+    - source_labels: ['__syslog_message_app_name']
       target_label: 'app'
-    - source_labels: ['__syslog_message_msgId']
+    - source_labels: ['__syslog_message_msg_id']
       target_label: 'process'
